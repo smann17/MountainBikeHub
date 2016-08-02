@@ -1,0 +1,17 @@
+create table user(ID integer primary key, username text,
+first_name text, last_name text, password text, profilePic text,
+experience_level text, hometown text, state text, bikePic text, bike_info text);
+
+INSERT INTO user (username, first_name, last_name, password, profilePic, experience_level, hometown, state, bikePic, bike_info) VALUES ('smann', 'Sean', 'Mann', 'password', 'profpic', 'beginner', "Fort Collins", 'CO', 'bikepic', "This is the ibke info");
+
+INSERT INTO user (username, first_name, last_name, password, profilePic, experience_level, hometown, state, bikePic, bike_info) VALUES ('bsumpter', 'Brian', 'Sumpter', 'password', 'profpic', 'beginner', "Pueblo", 'CO', 'bikepic', "This is Brians bike info");
+
+
+CREATE TABLE trails(ID integer primary key, name text, city text, state char(2), length real, ascent integer, difficulty char(2), description text);
+
+INSERT INTO 	trails(name, city, state, length, ascent, difficulty, description) VALUES ("Blue Sky", "Fort Collins", 'CO', 6, 300, 'bg', "cool trail");
+
+INSERT INTO trails (name, city, state, length, ascent, difficulty, description)
+VALUES ("Maxwell Loop", "Fort Collins", "CO", 5.7, 787, 'bl', "tough trail that is technical");
+
+Create table reviews (user_id integer primary key, trail_id integer primary key, rating integer, review_text text);
